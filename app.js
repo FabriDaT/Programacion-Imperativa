@@ -1,9 +1,9 @@
 const prompt = require("prompt-sync")({ sigint: true });
 
 let nombre = prompt("Ingrese su nombre: ");
-console.log('Hola ${nombre}');
+console.log(`Hola ${nombre}`);
 
-
+/*
 ***************************
 ./ Llego el dia... Bienvenid@s a Javascript 💪 😃 🎉
 
@@ -48,3 +48,4 @@ let esTrue = primera && segunda && tercera && cuarta // true // si una sola eval
                                                             // todo pasa a ser false
 let esFalse = primera || segunda || tercera || cuarta // true // con que una sola evalue como true
                                                       // todo pasa a ser true
+  */

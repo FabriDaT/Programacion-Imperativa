@@ -12,3 +12,9 @@ let llueve = true/false
 let piquete = true/false
 let TiempoDeLlegada = 20
 
+// situacion 2 = pagar boleta de la luz en rapipago
+
+let rapiAbierto = true / false
+let muchaGenteEnEspera = true/false
+let 
+
