@@ -44,24 +44,33 @@ cuenta las siguientes consideraciones:
 ● Si los litros consumidos son mayor a 25, se ha de añadir $25 al total a pagar.*/ 
 
 function totalAPagar(vehiculo , litrosConsumidos) {
-    var total
-    var precioLitro
+    let total
+    let precioLitro
     
-    (litrosConsumidos<25 && litrosConsumidos>0) ?  total = 50 : total = 0
-    litrosConsumidos>25 ? total = 25 : total = 0
+    
     
     switch (vehiculo) {
         case 'coche':
             precioLitro = 86
-            return precioLitro * litrosConsumidos + total
+            break
         case 'moto':
             precioLitro = 70
-            return precioLitro * litrosConsumidos + total
+            break
         case 'autobus' : 
             precioLitro = 55
-            return precioLitro * litrosConsumidos + total
+            break
         }
-}
+
+        (litrosConsumidos<=25 && litrosConsumidos>=0) ?  total = precioLitro*litrosConsumidos+ 50 :  litrosConsumidos>25 ? total = precioLitro*litrosConsumidos + 25 :total = precioLitro*litrosConsumidos
+        
+     
+        
+
+        return total
+    }   
+
+
+
 
 console.log('El total a pagar es de $' + totalAPagar("coche",10))
 
