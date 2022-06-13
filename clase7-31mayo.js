@@ -1,3 +1,4 @@
+const prompt = require("prompt-sync")({ sigint: true });
 /*Sin repetirte, modificá tu código de forma tal que cumpla con estas consignas:
 ● Si la edad es negativa, que se muestre en la consola este mensaje: "Error, edad
 inválida. Por favor ingrese un número válido."
@@ -46,9 +47,7 @@ cuenta las siguientes consideraciones:
 function totalAPagar(vehiculo , litrosConsumidos) {
     let total
     let precioLitro
-    
-    
-    
+       
     switch (vehiculo) {
         case 'coche':
             precioLitro = 86
@@ -61,16 +60,13 @@ function totalAPagar(vehiculo , litrosConsumidos) {
             break
         }
 
-        (litrosConsumidos<=25 && litrosConsumidos>=0) ?  total = precioLitro*litrosConsumidos+ 50 :  litrosConsumidos>25 ? total = precioLitro*litrosConsumidos + 25 :total = precioLitro*litrosConsumidos
-        
-     
-        
-
+        if (litrosConsumidos >= 0 && litrosConsumidos <= 25) {
+            total = (precioLitro * litrosConsumidos) + 50
+        } else if( litrosConsumidos >25) {
+            total = (precioLitro * litrosConsumidos) + 25
+        }
         return total
     }   
-
-
-
 
 console.log('El total a pagar es de $' + totalAPagar("coche",10))
 
@@ -119,27 +115,46 @@ let carne = 200
 let veggie = 100
 let panBlanco = 50
 let panNegro = 60
-let panSinGluten =  false
-let Queso =  false
-let Tomate =  false
-let Lechuga =  false
-let Cebolla =  false
-let Mayonesa = false
-let Mostaza = false
+let panSinGluten =  75
+let Queso 
+let Tomate 
+let Lechuga 
+let Cebolla 
+let Mayonesa 
+let Mostaza 
 
-let precioFinalSandwich = (tipoDeSandwichBase, tipoPan , queso, tomate, lechuga, cebolla, mayonesa, mostaza) => {
+
+let agregado = prompt("Queres algun agregado?.. si / no:  ")
+if ( agregado == 'si'){
+    
+    Queso= prompt("desea Queso?.. responda con si o no a las preguntas:  ")
+    Queso == 'si' ? Queso = true : Queso = false
+    Tomate= prompt("desea tomate?.. responda con si o no a las preguntas:  ")
+    Tomate == 'si' ? Tomate = true : Tomate = false
+    Lechuga= prompt("desea lechuga?.. responda con si o no a las preguntas:  ")
+    Lechuga == 'si' ?  Lechuga = true :  Lechuga = false
+    Cebolla= prompt("desea cebolla?.. responda con si o no a las preguntas:  ")
+    Cebolla == 'si' ? Cebolla = true : Cebolla = false
+    Mayonesa= prompt("desea mayonesa?.. responda con si o no a las preguntas:  ")
+    Mayonesa == 'si' ? Mayonesa = true : Mayonesa = false
+    Mostaza= prompt("desea mostaza?.. responda con si o no a las preguntas:  ")
+    Mostaza == 'si' ? Mostaza = true : Mostaza = false
+    }
+
+
+let precioFinalSandwich = (tipoDeSandwichBase, tipoPan , Queso, Tomate, Lechuga, Cebolla, Mayonesa, Mostaza) => {
     let precio = tipoDeSandwichBase + tipoPan 
-    if(queso == true){
+    if(Queso == true){
         precio +=20
-    } else if ( tomate == true){
+    } else if ( Tomate == true){
         precio +=15
-    } else if(lechuga == true){
+    } else if(Lechuga == true){
         precio +=10
-    } else if (cebolla == true){
+    } else if (Cebolla == true){
         precio +=15
-    } else if ( mayonesa == true){
+    } else if ( Mayonesa == true){
         precio +=5
-    } else (mostaza == true)
+    } else (Mostaza == true)
         precio +=5
     return precio
    
@@ -147,9 +162,87 @@ let precioFinalSandwich = (tipoDeSandwichBase, tipoPan , queso, tomate, lechuga,
     
 }
 
-console.log('El precio de su sandwich es de: $ '+ precioFinalSandwich(pollo,panNegro,true,true,true,false,false,false))
+
+console.log('El precio de su sandwich es de: $ '+ precioFinalSandwich(pollo,panNegro,Queso,Tomate,Lechuga,Cebolla,Mayonesa,Mostaza))
 
 //extra = queso * 20 + tomate * y asi sucesivamente va a sumar solo los que sean true
 //precioAdicionales = q * 20 + t * 15 + l * 10 + c * 15 + may * 5 + mos * 5
 
 
+<<<<<<< HEAD
+=======
+
+
+
+/*
+
+¿Cuál es el número secreto?
+Creá una función que reciba un parámetro numérico y verifique si el mismo es el
+número secreto. El número secreto deberá ser seleccionado de manera random de
+entre 1 y 10 —investigá qué hace la función Math.random()—. En caso de ser correcto,
+retorna un mensaje felicitando al usuario y, en caso de que no acierte, retorna un
+mensaje de aliento junto con el número ingresado y el secreto.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+abrirParacaidas()
+Crea una función llamada abrirParacaidas() que recibe dos parámetros: velocidad y
+altura. La función deberá decirnos si el paracaídas debe abrirse teniendo en cuenta lo
+siguiente:
+● La velocidad debe ser menor a 1000 km/h.
+● La altura debe ser mayor o igual a 2000 m y menor a 3000 m.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Estructura switch
+En estos ejercicios utilizaremos variables que contengan los valores para simular el
+ingreso de data de un usuario. Es decir, una variable stringUno que contenga —por
+ejemplo— el valor “perro”, que sería lo que el usuario “ingresa” como valor en nuestro
+programa.
+Traductor condicional
+Usando la estructura switch, crea un programa en el que si un usuario ingresa "casa",
+"perro", "pelota", "árbol" o "genio", nos devuelva la misma palabra traducida al idioma
+inglés.
+En caso de que la palabra sea distinta a la esperada, mostrarle un mensaje que le
+informe que la palabra ingresada es incorrecta.
+Valoración de películas
+Usando la estructura switch, pedirle al usuario que valore la película que acaba de ver
+según la siguiente escala:
+● Muy mala.
+● Mala.
+● Mediocre.
+● Buena.
+● Muy buena.
+Acompaña cada valoración con un mensaje que indique si te lamentás o te alegrás
+por su valoración.
+Por ejemplo: "Calificaste la película como Muy Mala. Lo lamentamos mucho.".
+
+En caso de que ingresara un valor distinto, mostrarle el mensaje: "Ingresaste un valor
+inválido".
+Cuando el usuario haya valorado la película, agradecerle su visita.
+
+*/ 
+>>>>>>> 6081f5b59f654832095ec015e0ef90964510b455
