@@ -149,43 +149,7 @@ let precioFinalSandwich = (tipoDeSandwichBase, tipoPan , queso, tomate, lechuga,
 
 console.log('El precio de su sandwich es de: $ '+ precioFinalSandwich(pollo,panNegro,true,true,true,false,false,false))
 
+//extra = queso * 20 + tomate * y asi sucesivamente va a sumar solo los que sean true
+//precioAdicionales = q * 20 + t * 15 + l * 10 + c * 15 + may * 5 + mos * 5
 
 
-
-/*  
-
-let loro = (texto) => {
-    for (let i = 1 ; i <= 5; i++) {
-        console.log(texto);
-    }  
-}
-loro('oye');
-
-**********************************************
-
-function noParesDeContarImparesHasta(numero){
-   let impares=0 
-   for ( let i = 0; i <= numero; i++ ){
-        
-        if ((impares % 2) != 0){
-            impares++
-        }
-    }
-    return impares
-}
-console.log(noParesDeContarImparesHasta(4))
-
-**********************************************
-
-function tablaDeMultiplicar(numero) {
- 	let i=1
-	while (i<= 10) {
-		console.log(numero+'*'+ i +"="+(numero*i)
-		i++
-	}  
-}
-tablaDeMultiplicar('5')
-
-
-
-*/
