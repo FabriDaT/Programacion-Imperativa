@@ -62,3 +62,36 @@ const sumarDiagonalSecundaria = matriz => {
     return acu
 }
 console.log(sumarDiagonalSecundaria(mat))
+
+// 5. Realizar una función que, dada una lista, devuelva una nueva lista cuyo
+// contenido sea igual a la original pero invertida.
+
+let lista = [999, 10, 9 , 8 , 7 , 6, 888]
+
+const invertirLista = list => {
+    for (let i = 0; i < list.length; i++) {
+        console.log(list[list.length-i-1])
+        
+    }
+}
+invertirLista(lista)
+
+
+/* Realizar una función que escriba una pirámide del 1 al 30 de la siguiente
+forma :
+1
+22
+333
+4444
+55555
+666666
+*/
+
+
+const piramide = () => {
+    for (let i = 1; i <= 30; i++) {
+        console.log("\n" + repeat(i) )
+        
+    }
+}
+piramide()
