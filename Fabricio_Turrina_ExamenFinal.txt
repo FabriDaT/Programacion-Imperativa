@@ -1,0 +1,131 @@
+let paises = [
+    {
+      nombre: "Argentina",
+      continente: "Sudamerica",
+      poblacion: 40000000
+    },
+  {
+      nombre: "Colombia",
+      continente: "Sudamerica",
+      poblacion: 50372000
+    },
+ 
+    {
+      nombre: "Brasil",
+      continente: "Sudamerica",
+      poblacion: 300000000
+    },
+    {
+      nombre: "Venezuela",
+      continente: "Sudamerica",
+      poblacion: 25000000
+    },
+    {
+      nombre: "Chile",
+      continente: "Sudamerica",
+      poblacion: 10000000
+    }
+  ];
+
+  /*
+Crear una función que reciba como parámetro un arreglo de objetos, un continente, y un número
+de población.
+La función debe retornar un nuevo arreglo solo con los países que sean del continente pasado 
+por parámetro, y además, que su población sea mayor o igual a la del parámetro.
+Si no encuentra coincidencias deberá retornar un array vacío
+ */
+
+const Continente = ( arreglo, continente, poblacion) => {
+    let nuevoArray =  []
+    for (let i = 0; i < arreglo.length; i++) {
+        if ( arreglo[i].continente == continente && arreglo[i].poblacion >= poblacion){
+            nuevoArray.push(arreglo[i])
+        }
+    }
+    return nuevoArray
+}
+ console.log ( Continente(paises,"Sudamerica",50000000) )
+
+
+
+
+ /*
+ Crear una función llamada bubbleSort que reciba como parámetros el array y un string
+ que represente el sentido de ordenamiento, la función deberá realizar un ordenamiento
+ interno del array según el orden indicado 
+ 
+ “ASC” lo ordenará ascendente
+ “DESC” lo ordenará descendente
+ 
+ Para analizar el correcto funcionamiento imprimir por consola el array antes 
+ y después de ejecutar la función. 
+ */
+
+let arrayDeNumeros = [1,2,3, 8, 9, 104, 5, 6, 7, 15];
+
+const bubbleSort = (arr, ordenamiento) => {
+    let aux
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length - 1; j++) {
+            if ( ordenamiento == "ASC"){
+                if(arr[j] > arr[j+1]){
+                    aux = arr[j]
+                    arr[j] = arr[j+1]
+                    arr[j+1] = aux
+                }
+            } else if ( ordenamiento == "DESC") {
+                if ( arr[j] < arr[j+1]) {
+                    aux = arr[j]
+                    arr[j] = arr[j+1]
+                    arr[j+1] = aux
+                }
+            }
+         }
+    }
+}
+
+console.log(arrayDeNumeros)
+bubbleSort(arrayDeNumeros, "ASC")
+console.log(arrayDeNumeros)
+
+
+/*
+1.Crear una matriz de 5 x 7.
+2.Crear una función que reciba la matriz generada por parámetro, sume todos los valores de la
+ fila 4 y retorne la suma.
+3.Crear una función que reciba la matriz generada por parámetro y retorne un nuevo array 
+con todos los valores pares de la matriz.
+*/
+
+let matriz = [
+    [5,8,99,1,3,12,20],
+    [11,32,89,99,7,8,9],
+    [11,22,33,44,58,64,77],
+    [10,10,10,10,10,10,10],
+    [99,8,96,45,42,69,50]
+]
+
+const sumaFila4 = mat =>{
+    let suma = 0
+    for (let i = 0; i < mat[3].length; i++) {
+        suma += mat[3][i]
+    }
+    return suma
+}
+console.log(sumaFila4(matriz))
+
+const sumatoriaPares = mat => {
+    let arregloDePares=[]
+    for (let i = 0; i < mat.length; i++) {
+        for (let j = 0; j < mat[i].length; j++) {
+            if (mat[i][j] % 2 === 0){
+                 arregloDePares.push(mat[i][j])
+            }
+        }
+    }
+    return arregloDePares
+}
+console.log(sumatoriaPares(matriz))
+
+
+    

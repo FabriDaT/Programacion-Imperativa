@@ -1,0 +1,72 @@
+﻿Examen parcial de Programación Imperativa
+¡Llegó el momento de poner a prueba todo lo que estuvimos viendo a lo largo de estas semanas!
+Metodología de evaluación
+Se evaluarán los siguientes conceptos sobre el código entregado:
+* FORMA 
+   * Que el código esté prolijo e implemente buenas prácticas
+   * Que las variables, métodos y funciones tengan nombres descriptivos
+   * Que utilices nombres en español o en inglés pero no ambos
+   * Que utilices camelCase donde corresponda
+* LÓGICA
+   * Que la lógica corresponda con lo que solicitan las consignas
+   * Que utilices los métodos más adecuados para cada caso
+* FUNCIONAMIENTO
+   * Que el código funcione correctamente, sin arrojar errores
+   * Que el código produzca el resultado esperado a partir de los datos suministrados
+IMPORTANTE: Cada ejercicio del examen tiene un puntaje específico acorde a su nivel de dificultad (ejercicio 1 30%, ejercicio 2 30% y ejercicio 3 40%) pero, más allá del puntaje obtenido con la resolución de uno o más ejercicios, para poder aprobar el examen es necesario haber resuelto el 50% de cada ejercicio, lo que representa un mínimo de conocimiento para cada unidad vista en la materia.
+Duración, formato y entrega
+El examen tendrá una duración de 100 minutos (aprox). La hora de finalización será informada por el docente. ⚠️Las entregas realizadas después del tiempo estipulado no serán tenidas en cuenta.
+Al terminar el parcial, deben entregar un solo archivo .txt que contenga todos los ejercicios, haciendo uso del formulario que les enviará el docente.
+ACLARACIÓN: Si usaron prompt van a tener que tener la línea 1 de config con lo del prompt entonces con eso sabemos que lo instalaron bien. 
+⚠️Recuerden verificar la recepción del formulario con el/la docente antes de retirarse del zoom⚠️
+Algunos consejos 🤓👌
+* Es normal tener nervios en esta etapa. Recordá que practicamos mucho estas semanas y tratá de mantener la mayor calma que puedas.
+* Lee todas las consignas antes de empezar el parcial para tener una idea general de lo que se pide.
+* Si alguna consigna no queda clara, recordá que podés pedir aclaración por privado al docente.
+* Si una consigna te bloquea demasiado, pasá a la siguiente, lo más probable es que luego se te ocurra una solución.
+* El uso de prompt es opcional. 
+Ejercicio 1: 
+Desarrollar una función para cada uno de las siguientes apartados: 
+* Que reciba por parámetro un número entero y retorne su triple.
+* Que reciba por parámetro dos números enteros y retorne la multiplicación de ambos.  
+* Que reciba por parámetro dos números enteros, verificar que sean distintos de 0 y retorne la división de ambos.
+Ejercicio 2:
+1.  Deberás escribir un objeto literal llamado turista que contenga las siguientes propiedades que deberás completar con tus datos:
+   1. nombre
+   2. apellido 
+   3. temperatura
+   4. está Vacunado (TRUE/FALSE)
+
+2. Teniendo en cuenta los datos del punto número 1:
+   1. Crear una función que reciba por parámetro el objeto y retorne un string en base a las siguientes condiciones : 
+-        si temperatura es menor a 37:  “puede pasar”,
+-         si temperatura es mayor o igual a 37 y menor que 39 y si está vacunado: “puede pasar porque está vacunado”
+-        si temperatura es 39 o mayor: “no puede pasar“
+*Deberás realizar la invocación de la función de forma que se pueda ver el resultado 
+Ejercicio 3:
+   1. Crear un array VACÍO llamado destinos. 
+   2. Dados estos tres objetos:
+let brasil = {
+  cantidadDeVisitas : 3,
+  clima: "soleado",
+  habitantes: "212 millones"
+ }
+ let rusia = {
+  cantidadDeVisitas : 4,
+  clima: "frío",
+  habitantes: "144 millones"
+ }
+ let estadosUnidos = {
+  cantidadDeVisitas : 1,
+  clima: "nublado",
+  habitantes: "329 millones"
+ }
+
+
+
+
+   1. Agregarlos al array. (utilizando un método JS, pensa cuál podrías utilizar)
+   2. Mostrar por consola el array para ver que contenga esos objetos.
+   3. Crea una función que reciba el array destinos como parámetro, e incremente en 1 la cantidad de visitas de cada uno de los destinos, llámala siguienteViaje. 
+* Debes utilizar alguna estructura de repetición vista en clase.
+   4.  Mostrar por consola el array de destinos antes y después de la ejecución de la función.
